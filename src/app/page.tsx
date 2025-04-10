@@ -62,19 +62,69 @@ export default function Home() {
           }),
         }}
       />
-      <Column fillWidth paddingY="l" gap="m">
-        <Column maxWidth="s">
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
+      <Column fillWidth paddingY="l" gap="l">
+        <Column maxWidth="l">
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="l">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+            <Text wrap="balance" onBackground="neutral-strong" variant="heading-default-xl">
               {home.subline}
             </Text>
           </RevealFx>
           <RevealFx translateY="12" delay={0.4} horizontal="start">
+            <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
+              Winchester X Rust is built for players who want the full Rust experience
+              <br/>— without the chaos of pay-to-win servers or admin abuse.
+              <br/>We follow official server standards with minor quality-of-life improvements to keep gameplay smooth and fair.
+              <br/>Whether you're a builder, a raider, or a solo grinder, you'll find a consistent environment backed by active moderation and a growing community that actually cares.
+              <br/>No gimmicks, no hand-holding — just Rust, the way it should be.
+            </Text>
+          </RevealFx>
+        </Column>
+        <Column maxWidth="l">
+          <RevealFx translateY="8" delay={0.6} fillWidth horizontal="start" paddingBottom="m">
+            <Text wrap="balance" onBackground="neutral-strong" variant="heading-default-xl">
+              Why Play Here?
+            </Text>
+          </RevealFx>
+          <RevealFx translateY="12" delay={0.8} horizontal="start">
+            <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
+              Winchester X Rust sticks close to the official vanilla experience — no kits, no pay-to-win, and no crazy plugins.
+              <br/>We keep the server fast, fair, and consistent so that every wipe feels like a fresh start.
+              <br/>Whether you’re farming for that first base or planning a full-scale raid, you’ll always know what to expect.
+            </Text>
+          </RevealFx>
+
+        </Column>
+        <Column maxWidth="l">
+          <RevealFx translateY="8" delay={1.0} fillWidth horizontal="start" paddingBottom="m">
+            <Text wrap="balance" onBackground="neutral-strong" variant="heading-default-xl">
+              Our Philosophy
+            </Text>
+          </RevealFx>
+          <RevealFx translateY="12" delay={1.2} horizontal="start">
+            <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
+              We believe Rust is at its best when it’s raw, challenging, and earned — not bought.
+              <br/>That’s why we’ve built a server that respects the original game design, while still listening to our players.
+              <br/>Our admins are active but not intrusive, and we’re always open to feedback.
+              <br/>This is your server just as much as ours.
+            </Text>
+          </RevealFx>
+        </Column>
+        <Column maxWidth="l">
+          <RevealFx translateY="12" delay={1.6} horizontal="start">
+            <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
+              We’re more than just a server — we’re a crew of survivors, builders, and fighters who actually enjoy Rust.
+              <br/>Hop into our Discord to chat, share clips, report issues, or just chill between wipes.
+              <br/>New players and veterans alike are welcome.
+            </Text>
+          </RevealFx>
+
+
+          {/* <RevealFx translateY="12" delay={0.4} horizontal="start">
             <Button
               id="about"
               data-border="rounded"
@@ -94,10 +144,10 @@ export default function Home() {
                 {about.title}
               </Flex>
             </Button>
-          </RevealFx>
+          </RevealFx> */}
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
       {routes["/blog"] && (
@@ -112,7 +162,7 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
+      <Projects range={[2]} /> */}
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
