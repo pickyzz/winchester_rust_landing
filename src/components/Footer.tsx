@@ -40,7 +40,7 @@ export const Footer = () => {
         <Flex gap="16">
           {social.map(
             (item) =>
-              item.link && (
+              item.link && item.footer && (
                 <IconButton
                   key={item.name}
                   href={item.link}

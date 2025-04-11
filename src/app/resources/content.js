@@ -30,6 +30,7 @@ const social = [
     name: "Discord",
     icon: "discord",
     link: "https://discord.gg/FR449Wf5U7",
+    footer: false,
   },
   // {
   //   name: "LinkedIn",
@@ -212,16 +213,19 @@ const gallery = {
       src: "/images/gallery/img-01.jpg",
       alt: "image",
       orientation: "horizontal",
+      mini: true,
     },
     {
       src: "/images/gallery/img-02.webp",
       alt: "image",
       orientation: "horizontal",
+      mini: true,
     },
     {
       src: "/images/gallery/img-03.webp",
       alt: "image",
       orientation: "horizontal",
+      mini: true,
     },
   ],
 };

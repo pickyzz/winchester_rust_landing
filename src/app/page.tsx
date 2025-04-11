@@ -6,6 +6,7 @@ import { Projects } from "@/components/work/Projects";
 import { baseURL, routes, style } from '@/app/resources';
 import { home, about, person, newsletter, social } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
+import MasonryMini from "@/components/gallery/MasonryGridMini";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -159,6 +160,11 @@ export default function Home() {
                   </Button>
                 ),
             )}
+          </RevealFx>
+        </Column>
+        <Column maxWidth="l">
+          <RevealFx translateY="8" delay={1.4} fillWidth horizontal="center">
+            <MasonryMini />
           </RevealFx>
         </Column>
 
