@@ -26,11 +26,11 @@ const newsletter = {
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
-  // {
-  //   name: "GitHub",
-  //   icon: "github",
-  //   link: "https://github.com/once-ui-system/nextjs-starter",
-  // },
+  {
+    name: "Discord",
+    icon: "discord",
+    link: "https://discord.gg/FR449Wf5U7",
+  },
   // {
   //   name: "LinkedIn",
   //   icon: "linkedin",

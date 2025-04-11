@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column, IconButton } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
+import { baseURL, routes, style } from '@/app/resources';
+import { home, about, person, newsletter, social } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 
@@ -122,6 +122,43 @@ export default function Home() {
               <br/>New players and veterans alike are welcome.
             </Text>
           </RevealFx>
+        </Column>
+        <Column maxWidth="l">
+          <RevealFx translateY="8" delay={1.0} fillWidth horizontal="center">
+            <Text wrap="balance" onBackground="neutral-strong" variant="heading-default-xl">
+              Join Us
+            </Text>
+          </RevealFx>
+        </Column>
+        <Column maxWidth="l">
+          <RevealFx translateY="12" delay={1.2} horizontal="center" paddingBottom="s">
+          <Button
+              id="about"
+              data-border="rounded"
+              href="/about"
+              variant="secondary"
+              size="l"
+              arrowIcon
+            >
+              <Flex horizontal="center" gap="16">
+                {social.map(
+                  (item) =>
+                    item.link && item.name === "Discord" && (
+                      <IconButton
+                        key={item.name}
+                        href={item.link}
+                        icon={item.icon}
+                        tooltip={item.name}
+                        size="l"
+                        variant="ghost"
+                      />
+                    ),
+                )}
+                <Text onBackground="neutral-weak" style={{ marginTop: "0.6rem", marginLeft: "-0.25rem" }}>Discord</Text>
+              </Flex>
+            </Button>
+          </RevealFx>
+        </Column>
 
 
           {/* <RevealFx translateY="12" delay={0.4} horizontal="start">
@@ -145,7 +182,6 @@ export default function Home() {
               </Flex>
             </Button>
           </RevealFx> */}
-        </Column>
       </Column>
       {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
