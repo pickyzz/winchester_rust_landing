@@ -52,7 +52,7 @@ const home = {
   label: "Home",
   title: `${person.name}`,
   description: `${person.name}'s Rust server`,
-  headline: <>Winchester X Rust</>,
+  headline: <>Winchester X </>,
   subline: (
     <>
       Survive. Raid. Dominate.

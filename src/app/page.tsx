@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column, IconButton } from "@/once-ui/components";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column, IconButton, SmartImage, InlineCode } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes, style } from '@/app/resources';
@@ -64,11 +64,11 @@ export default function Home() {
       />
       <Column fillWidth paddingY="l" gap="l">
         <Column maxWidth="l">
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="l">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
-          </RevealFx>
+          <Heading wrap="balance" variant="display-strong-l">
+            <RevealFx fillWidth horizontal="center" style={{ display: " flex", alignItems: "center", marginTop: "-2rem" }}>
+              {home.headline}<SmartImage src="/images/rust-logo1.png" width={16} height={12} alt="Rust Logo"/>
+            </RevealFx>
+          </Heading>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
             <Text wrap="balance" onBackground="neutral-strong" variant="heading-default-xl">
               {home.subline}
@@ -125,25 +125,27 @@ export default function Home() {
         </Column>
         <Column maxWidth="l">
           <RevealFx translateY="8" delay={1.0} fillWidth horizontal="center">
-            <Text wrap="balance" onBackground="neutral-strong" variant="heading-default-xl">
+            <Heading wrap="balance" variant="display-strong-xs">
               Join Us
-            </Text>
+            </Heading>
           </RevealFx>
         </Column>
         <Column maxWidth="l">
           <RevealFx translateY="12" delay={1.2} horizontal="center" paddingBottom="s">
-          <Button
-              id="about"
-              data-border="rounded"
-              href="/about"
-              variant="secondary"
-              size="l"
-              arrowIcon
-            >
-              <Flex horizontal="center" gap="16">
-                {social.map(
-                  (item) =>
-                    item.link && item.name === "Discord" && (
+            {social.map(
+              (item) =>
+                item.link && item.name && (
+                  <Button
+                    key={item.name}
+                    id={item.name}
+                    data-border="rounded"
+                    href={item.link}
+                    variant="secondary"
+                    size="l"
+                    arrowIcon
+                    style={{ marginLeft: "0.5rem", marginRight: "0.5rem", paddingLeft: "0.5rem", paddingRight: "0.5rem" }}
+                  >
+                    <Flex horizontal="center" gap="16">
                       <IconButton
                         key={item.name}
                         href={item.link}
@@ -152,11 +154,11 @@ export default function Home() {
                         size="l"
                         variant="ghost"
                       />
-                    ),
-                )}
-                <Text onBackground="neutral-weak" style={{ marginTop: "0.6rem", marginLeft: "-0.25rem" }}>Discord</Text>
-              </Flex>
-            </Button>
+                      <Text onBackground="neutral-weak" style={{ marginTop: "0.6rem", marginLeft: "-0.25rem" }}>Discord</Text>
+                    </Flex>
+                  </Button>
+                ),
+            )}
           </RevealFx>
         </Column>
 
