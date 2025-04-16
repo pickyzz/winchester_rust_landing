@@ -77,7 +77,7 @@ export default function Home() {
           </RevealFx>
           <RevealFx translateY="12" delay={0.4} horizontal="start">
             <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
-              Winchester X Rust is built for players who want the full Rust experience
+              Winrusty is built for players who want the full Rust experience
               <br/>— without the chaos of pay-to-win servers or admin abuse.
               <br/>We follow official server standards with minor quality-of-life improvements to keep gameplay smooth and fair.
               <br/>Whether you're a builder, a raider, or a solo grinder, you'll find a consistent environment backed by active moderation and a growing community that actually cares.
@@ -93,7 +93,7 @@ export default function Home() {
           </RevealFx>
           <RevealFx translateY="12" delay={0.8} horizontal="start">
             <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
-              Winchester X Rust sticks close to the official vanilla experience — no kits, no pay-to-win, and no crazy plugins.
+              Winrusty sticks close to the official vanilla experience — no kits, no pay-to-win, and no crazy plugins.
               <br/>We keep the server fast, fair, and consistent so that every wipe feels like a fresh start.
               <br/>Whether you’re farming for that first base or planning a full-scale raid, you’ll always know what to expect.
             </Text>

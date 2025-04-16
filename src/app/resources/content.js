@@ -1,7 +1,7 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Winchester",
+  firstName: "Winrusty",
   lastName: "Team",
   get name() {
     return `${this.firstName} ${this.lastName}`;
@@ -53,7 +53,7 @@ const home = {
   label: "Home",
   title: `${person.name}`,
   description: `${person.name}'s Rust server`,
-  headline: <>Winchester X </>,
+  headline: <>Winrusty </>,
   subline: (
     <>
       Survive. Raid. Dominate.
